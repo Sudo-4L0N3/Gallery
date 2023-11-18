@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+====================================================================================================
+Dear Fellow Programmer,
+
+Welcome to my code! I'm Dave, the architect behind these lines.
+Brace yourself for a journey through logic and creativity.
+Feel free to reach out if you have questions or ideas to share.
+Together, let's make this code shine!
+
+Happy coding,
+Sudo-4L0N3
+====================================================================================================
+-->
+
+<!--
+    The XML layout file for the main login screen (MainActivity).
+    It includes UI elements such as a background GIF, username and password input fields,
+    a login button, and options for social media login.
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Main layout with background color -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_color">
+
+        <!-- Animated GIF -->
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="400dp"
+            android:layout_height="380dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ph" />
+
+        <!-- Sign In Title -->
+        <TextView
+            android:id="@+id/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="370dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:text="Sign in"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <!-- Username Input -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:layout_below="@+id/sign_in"
+            android:hint="Username"
+            android:background="#30ffffff"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:padding="13dp"
+            android:drawableLeft="@drawable/black"
+            android:drawablePadding="20dp"
+            android:inputType="textNoSuggestions" />
+
+        <!-- Password Input -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:layout_below="@+id/username"
+            android:hint="Password"
+            android:background="#30ffffff"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:padding="13dp"
+            android:drawableLeft="@drawable/password"
+            android:drawablePadding="20dp"
+            android:inputType="textPassword"
+            />
+
+        <!-- Login Button -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login"
+            android:layout_below="@id/password"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/secondary_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
+        <!-- Forgot Password Link -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgot_pass"
+            android:layout_below="@id/login"
+            android:text="Forgot Password?"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <!-- Other Sign-in Options -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/others"
+            android:layout_above="@id/socialicons"
+            android:text="or sign-in with"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="25dp" />
+
+        <!-- Social Media Icons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/socialicons"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/google" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/github" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_height="48dp"
+                android:src="@drawable/facebook" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- Empty LinearLayout for spacing -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp" />
+
+</RelativeLayout>
